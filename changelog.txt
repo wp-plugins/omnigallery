@@ -1,0 +1,4 @@
+*** OmniGallery Changelog ***
+
+2012.11.26 - version 1.0.0
+ * First release!
