@@ -1,9 +1,9 @@
-=== OmniGallery by ColorLabs & Company ===
+﻿=== OmniGallery by ColorLabs & Company ===
 Contributors: colorlabs
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=paypal@colorlabsproject.com&item_name=Donation+for+Laboratory
 Requires at least: WP 3.1
 Tested up to: WP 3.4.2
-Stable tag: 1.0.1
+Stable tag: trunk
 License: GPLv3 or later
 Tags: flickr gallery, picasa gallery, pinterest gallery, facebook gallery, instagram gallery, photo gallery, colorlabs, gallery, social gallery, social, photo, flickr, picasa, facebook, instagram, pinterest
 
