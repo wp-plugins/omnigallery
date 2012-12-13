@@ -1,4 +1,4 @@
-=== OmniGallery ===
+=== OmniGallery by ColorLabs & Company ===
 Contributors: colorlabs
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=paypal@colorlabsproject.com&item_name=Donation+for+Laboratory
 Requires at least: WP 3.1
