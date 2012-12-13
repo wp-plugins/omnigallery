@@ -16,6 +16,8 @@ unset($_SESSION['phpFlickr_auth_token']);
 $SCFlickr = new phpFlickr(get_option('sc_api_flickr'), get_option('sc_secret_flickr')? get_option('sc_secret_flickr'): NULL);
 $SCFlickr->setToken(get_option('sc_flickr_token'));
 
+error_reporting(1);
+
 class SCFlickr
 {
 			

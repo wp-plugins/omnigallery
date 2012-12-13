@@ -18,7 +18,7 @@ require_once('includes/omnigallery.class.php');
 global $omnigallery, $scinstagram, $scfacebook, $scflickr;
 
 $omnigallery = new OmniGallery(__FILE__);
-$omnigallery->version = '1.0.0';
+$omnigallery->version = '1.0.1';
 
 if (class_exists('OmniGallery')):
 	$omnigallery = OmniGallery::getInstance();

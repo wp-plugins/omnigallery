@@ -54,6 +54,10 @@ Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Flickr bug fixes.
+
 = 1.0.0 =
 
 * First release!
