@@ -44,7 +44,7 @@ function getLatLng($address){
 	}
 			
 			return $result;
-} 
+}
 
 class SCInstagram
 {
@@ -220,7 +220,7 @@ class SCInstagram
 		if(!$tagFeed)
 		{
 			$userid = $values['userid'];
-			if(!is_numeric($values['userid']) && $values['userid'] != 'self' && $values['userid'] != 'myfeed' && strlen($values['userid']))
+			if(!is_numeric($values['userid']) && $values['userid'] != 'self' && $values['userid'] != 'feed' && strlen($values['userid']))
 				$userid = SCInstagram::getUserIdByName($values['userid']);
 		}
 			
@@ -305,7 +305,7 @@ class SCInstagram
 			$json = SCInstagram::getAPIInstance()->getUserRecent($userid, $max_id, $count);
 		}
 		
-		else if($userid == 'myfeed')
+		else if($userid == 'feed')
 		{
 			$json = SCInstagram::getAPIInstance()->getUserFeed($max_id);
 		}
@@ -725,7 +725,7 @@ class SCInstagram
         
         $id = intval($id);
         
-    	$user=get_option('sc_type_instagram');
+    	$type=get_option('sc_type_instagram');
     	$limit=get_option('sc_piccount_instagram');
     	$tag=get_option('sc_tag_instagram');
     	$address=get_option('sc_address_instagram');
@@ -735,12 +735,31 @@ class SCInstagram
     	$max_id = $nextMaxId;
     	$piccounter = 1;
     	$token = SCInstagram::getAccessToken();
-    		
+        
+        $instagramOptions = SCInstagram::getInstance()->getOptions();
+		$accessToken = SCInstagram::getInstance()->getAccessToken();
+        $user = $instagramOptions['scinstagram_user_username'];
+        
+        $values = array(
+            'userid' => $user,
+            'tag' => $tag,
+            'piccount' => $limit,
+        );
+        
+        if(empty($tag))
+		{
+			$user = $values['userid'];
+			if(!is_numeric($values['userid']) && $type != 'popular' && $type != 'feed' && strlen($values['userid']))
+				$user = SCInstagram::getUserIdByName($values['userid']);
+		}
+        
     	if(!empty($getlatlang))
     		$data = SCInstagram::getLocationBasedFeed($getlatlang);
     	else{
-    		if(empty($tag)) $data = SCInstagram::getFeedByUserId($user, $max_id, $nextMaxId);
-    		else $data = SCInstagram::getFeedByTag($tag, $max_id, $nextMaxId);					
+    		if(empty($tag)){ 
+                $data = SCInstagram::getFeedByUserId($user, $max_id, $nextMaxId);
+    		}else{ 
+                $data = SCInstagram::getFeedByTag($tag, $max_id, $nextMaxId); }					
     	}
         
     	$columns = intval($columns);
@@ -801,6 +820,9 @@ class SCInstagram
     	}
         
         $return .= '</div><!--/#gallery-->';
+        
+
+        $return .= esc_attr( $instagramOptions['scinstagram_user_username'] ).' --- '.$accessToken.' --- '.$user;
         
     	return $return;        
     }

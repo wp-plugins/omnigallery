@@ -55,7 +55,6 @@
             <tbody>
             
 			<?php 
-	
 			$instagramOptions = SCInstagram::getInstance()->getOptions();
 				
 			if(SCInstagram::getInstance()->getAccessToken()):
@@ -133,7 +132,7 @@
                     <th scope="row"><label for="scinstagram-disable-image-attr"><?php _e('Image Attribute', 'omnigallery'); ?></label></th>
                     <td>
 						<label for="scinstagram-disable-image-attr">
-						<input type="checkbox" class="button-primary" name="scinstagram-disable-image-attr" id="scinstagram-disable-image-attr" <?php echo esc_attr( $instagramOptions['scinstagram_disable_image_attributes'] ) ? ' checked="checked"' : '' ?> />
+						<input type="checkbox" name="scinstagram-disable-image-attr" id="scinstagram-disable-image-attr" <?php echo esc_attr( $instagramOptions['scinstagram_disable_image_attributes'] ) ? ' checked="checked"' : '' ?> />
 						<?php _e('Disable width and height attribute for images (e.g. for responsive layouts)', 'omnigallery'); ?>
 						</label>
                     </td>

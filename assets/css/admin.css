@@ -1,6 +1,9 @@
-#socialcast .by-colorlabs{
-    position: absolute;
-    top: 0;
-    padding-right: 5%;
-    right: 0;
+#omnigallery h2{
+    float: left;
+}
+#omnigallery .by-colorlabs{
+    float: right;
+}
+#omnigallery form{
+    clear: both;
 }

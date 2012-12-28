@@ -11,9 +11,11 @@
                 <td><select class="sc-input" name="sc_type_instagram" id="sc_type_instagram">
 					<?php
 					foreach($sc_type_instaArr as $key => $type) {
-						if($sc_settings['sc_type_instagram'] != $type) $selected = '';
+                        if( !is_numeric($key)){ $value = $key; }else{ $value = $type; }
+                       
+						if($sc_settings['sc_type_instagram'] != $value) $selected = '';
 						else $selected = ' selected';
-						echo "<option value='$type'$selected>$type</option>\n";
+						echo "<option value='$value'$selected>$type</option>\n";
 					} ?>
                 </select>
                 <br />

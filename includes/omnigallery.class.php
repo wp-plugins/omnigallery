@@ -297,7 +297,7 @@ Class OmniGallery
                 // Get array with all the options
                 $sc_settings = $this->get_settings();
                 // Make selects data
-                $sc_type_instaArr = array( __('Popular','omnigallery'), __('Self','omnigallery'), __('Feed','omnigallery'));
+                $sc_type_instaArr = array( 'popular' => __('Popular','omnigallery'), 'self' => __('Self','omnigallery'), 'feed' => __('Feed','omnigallery'));
                 
                 ?>
                 
@@ -322,7 +322,7 @@ Class OmniGallery
     function install() {
     		update_option('sc_active_version', '1.0.0');
 
-            add_option('sc_type_instagram', 'Popular' );
+            add_option('sc_type_instagram', 'popular' );
             add_option('sc_piccount_instagram', '10' );
             add_option('sc_random_instagram', '' );
             add_option('sc_tag_instagram', '' );
