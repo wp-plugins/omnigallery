@@ -5,13 +5,13 @@ Requires at least: WP 3.1
 Tested up to: WordPress 3.5.0
 Stable tag: trunk
 License: GPLv3 or later
-Tags: flickr gallery, picasa gallery, pinterest gallery, facebook gallery, instagram gallery, photo gallery, colorlabs, gallery, social gallery, social, photo, flickr, picasa, facebook, instagram, pinterest
+Tags: flickr gallery, picasa gallery, pinterest gallery, facebook gallery, instagram gallery, dribble gallery, photo gallery, colorlabs, gallery, social gallery, social, photo, flickr, picasa, facebook, instagram, pinterest
 
 OmniGallery helps you to create photo gallery from your social network.
 
 == Description ==
 
-Enhance your WordPress website with the OmniGallery Photo Gallery. You can easily add your photo from Instagram, Pinterest, Picasa, Flickr and Facebook into your Wordpress Gallery.
+Enhance your WordPress website with the OmniGallery Photo Gallery. You can easily add your photo from Instagram, Pinterest, Picasa, Flickr, Facebook, and Dribble into your Wordpress Gallery.
 Adding the gallery is very simple, you just have to add new post/page, then select gallery icon, select omnigallery then you can select which gallery you want to fetch your images to your blog.
 You can add multiple gallery on the same post/page.
 
