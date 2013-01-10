@@ -179,3 +179,33 @@
     
 </div><!-- /#picasasettings -->
 <!-- END OF PICASA SETTINGS -->
+
+<!-- Dribble SETTINGS -->
+<div class="group c1" id="sc-option-dribblesettings">
+    <h3 class="title"><?php _e('Dribble Settings', 'omnigallery'); ?></h3>
+
+    <table class="form-table">
+        <tbody>
+            <tr valign="top">
+                <th scope="row"><label for="sc_username_dribble"><?php _e('Dribble Username', 'omnigallery'); ?></label></th>
+
+                <td><input class="regular-text" name="sc_username_dribble" id="sc_username_picasa" type="text" value="<?php if ($sc_settings['sc_username_dribble']!="") echo $sc_settings['sc_username_dribble'];?>"/>
+                <br />
+                <span class="description"><label for="sc_username_dribble"><?php _e('Enter your Dribble Username in here', 'omnigallery'); ?>.</label></span>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><label for="sc_piccount_dribble"><?php _e('Count Dribble', 'omnigallery'); ?></label></th>
+                <td>
+                    <input class="regular-text" name="sc_piccount_dribble" id="sc_piccount_picasa" type="text" value="<?php if ($sc_settings['sc_piccount_dribble']!="") echo $sc_settings['sc_piccount_dribble'];?>"/>
+                    <br/>
+                    <span class="description"><label for="sc_piccount_dribble"><?php _e('Enter the image limit for Dribble', 'omnigallery'); ?>.</label></span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+</div><!-- /#picasasettings -->
+<!-- END OF Dribble SETTINGS -->

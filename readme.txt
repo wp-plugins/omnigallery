@@ -2,7 +2,7 @@
 Contributors: colorlabs
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=paypal@colorlabsproject.com&item_name=Donation+for+Laboratory
 Requires at least: WP 3.1
-Tested up to: WordPress 3.4.2
+Tested up to: WordPress 3.5.0
 Stable tag: trunk
 License: GPLv3 or later
 Tags: flickr gallery, picasa gallery, pinterest gallery, facebook gallery, instagram gallery, photo gallery, colorlabs, gallery, social gallery, social, photo, flickr, picasa, facebook, instagram, pinterest
@@ -54,6 +54,10 @@ Yes; OmniGallery will work with any theme, but may require some styling to make 
 Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com/support/) or you can also use wordpress plugins support for reporting bugs and error.
 
 == Changelog ==
+
+= 1.0.3 = 
+
+* Add Dribble gallery.
 
 = 1.0.2 = 
 

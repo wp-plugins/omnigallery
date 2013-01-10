@@ -822,7 +822,7 @@ class SCInstagram
         $return .= '</div><!--/#gallery-->';
         
 
-        $return .= esc_attr( $instagramOptions['scinstagram_user_username'] ).' --- '.$accessToken.' --- '.$user;
+        //$return .= esc_attr( $instagramOptions['scinstagram_user_username'] ).' --- '.$accessToken.' --- '.$user;
         
     	return $return;        
     }

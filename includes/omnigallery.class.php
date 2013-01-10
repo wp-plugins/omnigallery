@@ -260,6 +260,13 @@ Class OmniGallery
 				}
 				$images = $scfacebook->get_gallery_images($attr);
 				break;
+			case 'dribble':
+				if (!isset($scdribble)) {
+					$scdribble = new SCDribble();
+				}
+				$images = $scdribble->get_gallery_images($attr);
+				break;
+					
 		}
 
 		if (isset($images) && is_array($images)) {
@@ -363,6 +370,9 @@ Class OmniGallery
             
     		'sc_username_picasa'          => get_option('sc_username_picasa'),
     		'sc_piccount_picasa'          => get_option('sc_piccount_picasa'),
+			
+			'sc_username_dribble'          => get_option('sc_username_dribble'),
+    		'sc_piccount_dribble'          => get_option('sc_piccount_dribble'),
             
             'sc_flickr_token'             => get_option('sc_flickr_token'),
     	);
@@ -389,7 +399,8 @@ Class OmniGallery
     		register_setting('sc-options', 'sc_username_picasa');
     		register_setting('sc-options', 'sc_piccount_picasa');
             register_setting('sc-options', 'sc_flickr_token');
-
+			register_setting('sc-options', 'sc_username_dribble');
+    		register_setting('sc-options', 'sc_piccount_dribble');
     }
 
 }

@@ -34,6 +34,7 @@ require_once('includes/flickr/phpFlickr.php');
 require_once('includes/scflickr.class.php');
 require_once('includes/scpicasa.class.php');
 require_once('includes/scpinterest.class.php');
+require_once('includes/scdribble.class.php');
 
 if (class_exists('SCInstagram')):
 	$scinstagram = SCInstagram::getInstance();

@@ -8,7 +8,7 @@
  */
 
 $selected_tab = isset($_GET['omnigallery-tab']) ? esc_attr($_GET['omnigallery-tab']) : 'instagram';
-if (!in_array($selected_tab, array('instagram', 'flickr', 'picasa', 'pinterest', 'facebook'))) {
+if (!in_array($selected_tab, array('instagram', 'flickr', 'picasa', 'pinterest', 'facebook', 'dribble', '500px'))) {
 	$selected_tab = 'instagram';
 }
 
@@ -130,7 +130,16 @@ $fields = array(
         
         ),
 	),
-
+	'dribble' => array(
+		'name' => __('Dribble', 'omnigallery'),
+        'prelude' => __('You can define your Dribble Username under OmniGallery Settings', 'omnigallery'),
+		'fields' => array(),
+	),
+	'500px' => array(
+		'name' => __('500px', 'omnigallery'),
+        'prelude' => __('You can define your 500px Username under OmniGallery Settings', 'omnigallery'),
+		'fields' => array(),
+	),
 );
 
 $tab_list = '';
