@@ -1,0 +1,13 @@
+*** OmniGallery Changelog ***
+
+2013.01.10 - version 1.0.3
+ * Add Dribble gallery.
+ 
+2012.12.28 - version 1.0.2
+ * Instagram bug fixes.
+
+2012.12.13 - version 1.0.1
+ * Flickr bug fixes.
+
+2012.11.26 - version 1.0.0
+ * First release!
