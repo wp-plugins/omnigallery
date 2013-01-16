@@ -1,5 +1,9 @@
 *** OmniGallery Changelog ***
 
+2013.01.16 - version 1.0.4
+ * Added plugin_get_version on omnigallery class
+ * Fix the way to fetch version number
+
 2013.01.10 - version 1.0.3
  * Add Dribble gallery.
  

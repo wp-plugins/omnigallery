@@ -55,6 +55,11 @@ Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com
 
 == Changelog ==
 
+= 1.0.4 =
+
+ * Added plugin_get_version on omnigallery class
+ * Fix the way to fetch version number
+
 = 1.0.3 = 
 
 * Add Dribble gallery.
