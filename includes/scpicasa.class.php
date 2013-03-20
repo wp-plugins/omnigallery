@@ -41,7 +41,10 @@ class SCPicasa
     function get_gallery_images( $attr = array() ){
         
         global $omnigallery, $scpicasa, $post;
-        
+
+        $sc_username_picasa = get_option('sc_username_picasa');
+        if( empty($sc_username_picasa) ) return;
+               
         static $instance = 0;
     	$instance++;
 
@@ -62,7 +65,7 @@ class SCPicasa
 		extract($attr);
         
         $id = intval($id);
-    
+
     	$columns = intval($columns);
     	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
     	$float = is_rtl() ? 'right' : 'left';        
@@ -101,8 +104,8 @@ class SCPicasa
         $return .= "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
 
 		$content = file_get_contents("http://picasaweb.google.com/data/feed/base/user/".get_option('sc_username_picasa')."?alt=rss&kind=photo&hl=id&imgmax=1600&max-results=".get_option('sc_piccount_picasa')."&start-index=1");
-		$x = new SimpleXmlElement($content);
-		
+        $x = new SimpleXmlElement($content);
+        
 		foreach($x->channel->item as $entry => $value){
 		
 			$title = $value->title;

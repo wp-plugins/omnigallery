@@ -55,6 +55,10 @@ Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com
 
 == Changelog ==
 
+= 1.0.5 =
+
+ * Fix issue on picasa, username check.
+ 
 = 1.0.4 =
 
  * Added plugin_get_version on omnigallery class

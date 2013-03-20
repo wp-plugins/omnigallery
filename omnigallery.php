@@ -3,7 +3,7 @@
 Plugin Name: OmniGallery
 Plugin URI: http://colorlabsproject.com/
 Description: OmniGallery helps you to create photo gallery from your social network.
-Version: 1.0.4
+Version: 1.0.5
 Author: ColorLabs & Company
 Author URI: http://colorlabsproject.com/
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
