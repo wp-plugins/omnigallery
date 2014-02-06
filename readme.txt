@@ -15,7 +15,7 @@ Enhance your WordPress website with the OmniGallery Photo Gallery. You can easil
 Adding the gallery is very simple, you just have to add new post/page, then select gallery icon, select omnigallery then you can select which gallery you want to fetch your images to your blog.
 You can add multiple gallery on the same post/page.
 
-[vimeo http://vimeo.com/55524011]
+[youtube http://www.youtube.com/watch?v=GJLJ6vEaxiI]
 == Installation ==
 
 = Minimum Requirements =
