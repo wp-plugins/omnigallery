@@ -55,6 +55,14 @@ Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com
 
 == Changelog ==
 
+= 1.0.7
+  
+ * Flickr issue on Flickr Photo Gallery
+
+= 1.0.6
+ 
+ * Fix issue on plugin_get_version(), change the function name so it will not conflict with other plugins.
+
 = 1.0.5 =
 
  * Fix issue on picasa, username check.
