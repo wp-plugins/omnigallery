@@ -1,0 +1,571 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OmniGallery v1.0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-04-23 09:21:52+0000\n"
+"Last-Translator: colorlabs <arif@colorlabsproject.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: includes/omnigallery.admin.php:4
+#@ omnigallery
+msgid "Instagram Settings"
+msgstr ""
+
+#: includes/omnigallery.admin.php:9
+#@ omnigallery
+msgid "Type"
+msgstr ""
+
+#: includes/omnigallery.admin.php:22
+#@ omnigallery
+msgid "Select type to show the instagramPopular"
+msgstr ""
+
+#: includes/omnigallery.admin.php:27
+#@ omnigallery
+msgid "Count Instagram"
+msgstr ""
+
+#: includes/omnigallery.admin.php:31
+#@ omnigallery
+msgid "Count of your Instagram image"
+msgstr ""
+
+#: includes/omnigallery.admin.php:36
+#@ omnigallery
+msgid "Random Instagram"
+msgstr ""
+
+#: includes/omnigallery.admin.php:39
+#@ omnigallery
+msgid "Random Instagram Image"
+msgstr ""
+
+#: includes/omnigallery.admin.php:44
+#@ omnigallery
+msgid "Tag Instagram"
+msgstr ""
+
+#: includes/omnigallery.admin.php:44
+#: includes/omnigallery.admin.php:50
+#: includes/omnigallery.admin.php:137
+#@ omnigallery
+msgid "optional"
+msgstr ""
+
+#: includes/omnigallery.admin.php:46
+#@ omnigallery
+msgid "Tag"
+msgstr ""
+
+#: includes/omnigallery.admin.php:46
+#@ omnigallery
+msgid "Currently only one tag. Username is ignored."
+msgstr ""
+
+#: includes/omnigallery.admin.php:50
+#@ omnigallery
+msgid "Address"
+msgstr ""
+
+#: includes/omnigallery.admin.php:50
+#@ omnigallery
+msgid "Coordinates Instagram"
+msgstr ""
+
+#: includes/omnigallery.admin.php:52
+#@ omnigallery
+msgid "Entry Address"
+msgstr ""
+
+#: includes/omnigallery.admin.php:52
+#@ omnigallery
+msgid "Coordinates instagram in here"
+msgstr ""
+
+#: includes/omnigallery.admin.php:63
+#: includes/scflickr.class.php:31
+#@ omnigallery
+msgid "Flickr Settings"
+msgstr ""
+
+#: includes/omnigallery.admin.php:68
+#@ omnigallery
+msgid "Flickr API"
+msgstr ""
+
+#: includes/omnigallery.admin.php:72
+#@ omnigallery
+msgid "Entry Flickr API"
+msgstr ""
+
+#: includes/omnigallery.admin.php:77
+#@ omnigallery
+msgid "Flickr Secret"
+msgstr ""
+
+#: includes/omnigallery.admin.php:81
+#@ omnigallery
+msgid "Entry Flickr Secret"
+msgstr ""
+
+#: includes/omnigallery.admin.php:86
+#@ omnigallery
+msgid "Flickr ID"
+msgstr ""
+
+#: includes/omnigallery.admin.php:91
+#@ omnigallery
+msgid "Enter your Flickr ID"
+msgstr ""
+
+#: includes/omnigallery.admin.php:91
+#@ omnigallery
+msgid "in here"
+msgstr ""
+
+#: includes/omnigallery.admin.php:96
+#@ omnigallery
+msgid "Count Flickr"
+msgstr ""
+
+#: includes/omnigallery.admin.php:101
+#@ omnigallery
+msgid "Enter the Flickr image limit"
+msgstr ""
+
+#: includes/omnigallery.admin.php:114
+#@ omnigallery
+msgid "Pinterest Settings"
+msgstr ""
+
+#: includes/omnigallery.admin.php:119
+#@ omnigallery
+msgid "Pinterest Username"
+msgstr ""
+
+#: includes/omnigallery.admin.php:123
+#@ omnigallery
+msgid "Enter your Pinterest username here"
+msgstr ""
+
+#: includes/omnigallery.admin.php:128
+#@ omnigallery
+msgid "Count Pinterest"
+msgstr ""
+
+#: includes/omnigallery.admin.php:132
+#@ omnigallery
+msgid "Enter the image limit for pinterest"
+msgstr ""
+
+#: includes/omnigallery.admin.php:137
+#@ omnigallery
+msgid "Specific Board"
+msgstr ""
+
+#: includes/omnigallery.admin.php:142
+#@ omnigallery
+msgid "Enter the specific board for y pinterest"
+msgstr ""
+
+#: includes/omnigallery.admin.php:155
+#@ omnigallery
+msgid "Picasa Settings"
+msgstr ""
+
+#: includes/omnigallery.admin.php:160
+#@ omnigallery
+msgid "Picasa Username"
+msgstr ""
+
+#: includes/omnigallery.admin.php:164
+#@ omnigallery
+msgid "Enter your Picasa Username in here"
+msgstr ""
+
+#: includes/omnigallery.admin.php:169
+#@ omnigallery
+msgid "Count Picasa"
+msgstr ""
+
+#: includes/omnigallery.admin.php:173
+#@ omnigallery
+msgid "Enter the image limit for Picasa"
+msgstr ""
+
+#: includes/omnigallery.admin.php:185
+#@ omnigallery
+msgid "Dribble Settings"
+msgstr ""
+
+#: includes/omnigallery.admin.php:190
+#@ omnigallery
+msgid "Dribble Username"
+msgstr ""
+
+#: includes/omnigallery.admin.php:194
+#@ omnigallery
+msgid "Enter your Dribble Username in here"
+msgstr ""
+
+#: includes/omnigallery.admin.php:199
+#@ omnigallery
+msgid "Count Dribble"
+msgstr ""
+
+#: includes/omnigallery.admin.php:203
+#@ omnigallery
+msgid "Enter the image limit for Dribble"
+msgstr ""
+
+#: includes/omnigallery.class.php:39
+#@ omnigallery
+msgid "OmniGallery"
+msgstr ""
+
+#: includes/omnigallery.class.php:190
+#@ omnigallery
+msgid "Original width"
+msgstr ""
+
+#: includes/omnigallery.class.php:190
+#@ omnigallery
+msgid "Original height"
+msgstr ""
+
+#: includes/omnigallery.class.php:299
+#@ omnigallery
+msgid "Powered by"
+msgstr ""
+
+#: includes/omnigallery.class.php:307
+#@ omnigallery
+msgid "Popular"
+msgstr ""
+
+#: includes/omnigallery.class.php:307
+#@ omnigallery
+msgid "Self"
+msgstr ""
+
+#: includes/omnigallery.class.php:307
+#@ omnigallery
+msgid "Feed"
+msgstr ""
+
+#: includes/omnigallery.class.php:319
+#@ instagrabber
+msgid "Save"
+msgstr ""
+
+#: includes/scfacebook.class.php:6
+#: omnigallery.php:13
+#@ omnigallery
+msgid "Please do not load this screen directly. Thanks!"
+msgstr ""
+
+#: includes/scfacebook.class.php:46
+#@ omnigallery
+msgid "FB Album Settings"
+msgstr ""
+
+#: includes/scfacebook.class.php:79
+#@ omnigallery
+msgid "Warning"
+msgstr ""
+
+#: includes/scfacebook.class.php:79
+#@ omnigallery
+msgid "Another plugin has included the Facebook API throughout all of Wordpress.  I suggest you contact that plugin's author and ask them to include it only in pages where it's actually needed."
+msgstr ""
+
+#: includes/scfacebook.class.php:80
+#@ omnigallery
+msgid "Things may work fine as-is, but only if the API version included by the other plugin is at least as recent as the one required by Facebook Photo Fetcher."
+msgstr ""
+
+#: includes/scfacebook.class.php:88
+#: includes/scfacebook.class.php:393
+#@ omnigallery
+msgid "Sorry, but as of version 1.0.0, Facebook Photo Album requires PHP5."
+msgstr ""
+
+#: includes/scfacebook.class.php:101
+#@ omnigallery
+msgid "Failed to create Facebook authentication token!"
+msgstr ""
+
+#: includes/scfacebook.class.php:121
+#@ omnigallery
+msgid "Failed to get an authenticated session."
+msgstr ""
+
+#: includes/scfacebook.class.php:122
+#@ omnigallery
+msgid "Failed to get a session secret."
+msgstr ""
+
+#: includes/scfacebook.class.php:188
+#@ omnigallery
+msgid "Connect with Facebook"
+msgstr ""
+
+#: includes/scfacebook.class.php:196
+#, php-format
+#@ omnigallery
+msgid "This plugin is successfully connected with <b>%s</b>'s Facebook account and is ready to create galleries."
+msgstr ""
+
+#: includes/scfacebook.class.php:209
+#@ omnigallery
+msgid "Reset Account"
+msgstr ""
+
+#: includes/scfacebook.class.php:230
+#@ omnigallery
+msgid "Save Facebook Session"
+msgstr ""
+
+#: includes/scfacebook.class.php:545
+#@ omnigallery
+msgid "Facebook Gallery"
+msgstr ""
+
+#: includes/scinstagram.class.php:147
+#@ omnigallery
+msgid "Next"
+msgstr ""
+
+#: includes/scinstagram.class.php:149
+#@ omnigallery
+msgid "Previous"
+msgstr ""
+
+#: includes/scinstagram.class.php:586
+#@ omnigallery
+msgid "Settings saved."
+msgstr ""
+
+#: includes/scinstagram.class.php:590
+#@ omnigallery
+msgid "Instagram API reported the following error"
+msgstr ""
+
+#: includes/scinstagram.class.php:643
+#@ omnigallery
+msgid "Instagram settings"
+msgstr ""
+
+#: includes/scinstagram.class.php:695
+#, php-format
+#@ omnigallery
+msgid "To improve performance of this plugin, it is highly recommended to make the directory wp-content or wp-content/cache writable. For further information click <a target=\"_blank\" href=\"%s\">here</a>"
+msgstr ""
+
+#: includes/scinstagram.class.php:697
+#@ omnigallery
+msgid "Instagram requires <a href=\"http://php.net/manual/en/book.curl.php\" target=\"_blank\">PHP cURL</a> extension to work properly"
+msgstr ""
+
+#: includes/scinstagram.class.php:699
+#@ omnigallery
+msgid "Geocoding won't work unless <a href=\"http://www.php.net/manual/en/mbstring.installation.php\" target=\"_blank\">mbstring</a> is activated"
+msgstr ""
+
+#: includes/scinstagram.options.php:25
+#, php-format
+#@ omnigallery
+msgid "OmniGallery requires at least PHP 5.0 to work properly, your version is: %s"
+msgstr ""
+
+#: includes/scinstagram.options.php:52
+#@ omnigallery
+msgid "Instagram Account Settings"
+msgstr ""
+
+#: includes/scinstagram.options.php:62
+#@ omnigallery
+msgid "Your application is authorized, have fun!"
+msgstr ""
+
+#: includes/scinstagram.options.php:66
+#@ omnigallery
+msgid "Reset settings"
+msgstr ""
+
+#: includes/scinstagram.options.php:71
+#@ omnigallery
+msgid "To activate, just enter your Instagram username and password"
+msgstr ""
+
+#: includes/scinstagram.options.php:73
+#@ omnigallery
+msgid "Username"
+msgstr ""
+
+#: includes/scinstagram.options.php:79
+#@ omnigallery
+msgid "Password"
+msgstr ""
+
+#: includes/scinstagram.options.php:85
+#: includes/scinstagram.options.php:144
+#@ omnigallery
+msgid "Save settings"
+msgstr ""
+
+#: includes/scinstagram.options.php:97
+#@ omnigallery
+msgid "Instagram General settings"
+msgstr ""
+
+#: includes/scinstagram.options.php:103
+#@ omnigallery
+msgid "Refresh cache after"
+msgstr ""
+
+#: includes/scinstagram.options.php:110
+#@ omnigallery
+msgid "minutes"
+msgstr ""
+
+#: includes/scinstagram.options.php:114
+#@ omnigallery
+msgid "Cache is not active"
+msgstr ""
+
+#: includes/scinstagram.options.php:119
+#@ omnigallery
+msgid "FancyBox Effect"
+msgstr ""
+
+#: includes/scinstagram.options.php:123
+#@ omnigallery
+msgid "Disable fancybox effect"
+msgstr ""
+
+#: includes/scinstagram.options.php:126
+#@ instagram
+msgid "Note: Do only check this if you are having conflicts with other effects or if you do not want to use any effect"
+msgstr ""
+
+#: includes/scinstagram.options.php:132
+#@ omnigallery
+msgid "Image Attribute"
+msgstr ""
+
+#: includes/scinstagram.options.php:136
+#@ omnigallery
+msgid "Disable width and height attribute for images (e.g. for responsive layouts)"
+msgstr ""
+
+#: omnigallery-form.php:97
+#@ omnigallery
+msgid "Instagram"
+msgstr ""
+
+#: omnigallery-form.php:98
+#@ omnigallery
+msgid "Make sure your account is authorized. Check if your account has been authorized on OmniGallery &rarr; Instagram Settings"
+msgstr ""
+
+#: omnigallery-form.php:102
+#@ omnigallery
+msgid "Flickr"
+msgstr ""
+
+#: omnigallery-form.php:103
+#@ omnigallery
+msgid "You can define your Flickr API Key under OmniGallery Settings"
+msgstr ""
+
+#: omnigallery-form.php:107
+#@ omnigallery
+msgid "Picasa"
+msgstr ""
+
+#: omnigallery-form.php:108
+#@ omnigallery
+msgid "You can define your Picasa Username under OmniGallery Settings"
+msgstr ""
+
+#: omnigallery-form.php:112
+#@ omnigallery
+msgid "Pinterest"
+msgstr ""
+
+#: omnigallery-form.php:113
+#@ omnigallery
+msgid "You can define your Pinterest Username under OmniGallery Settings"
+msgstr ""
+
+#: omnigallery-form.php:117
+#@ omnigallery
+msgid "Facebook"
+msgstr ""
+
+#: omnigallery-form.php:118
+#@ omnigallery
+msgid "You can define your Facebook API Key under OmniGallery &rarr; FB Album Settings"
+msgstr ""
+
+#: omnigallery-form.php:122
+#@ omnigallery
+msgid "Select Album"
+msgstr ""
+
+#: omnigallery-form.php:126
+#@ omnigallery
+msgid "Select your Facebook photo album to use in gallery."
+msgstr ""
+
+#: omnigallery-form.php:131
+#@ omnigallery
+msgid "Dribble"
+msgstr ""
+
+#: omnigallery-form.php:132
+#@ omnigallery
+msgid "You can define your Dribble Username under OmniGallery Settings"
+msgstr ""
+
+#: omnigallery-form.php:136
+#@ omnigallery
+msgid "500px"
+msgstr ""
+
+#: omnigallery-form.php:137
+#@ omnigallery
+msgid "You can define your 500px Username under OmniGallery Settings"
+msgstr ""
+
+#: omnigallery-form.php:193
+#@ omnigallery
+msgid "Shortcode preview"
+msgstr ""
+
+#: omnigallery-form.php:199
+#@ omnigallery
+msgid "Insert into post"
+msgstr ""
+
+#: omnigallery-form.php:200
+#@ omnigallery
+msgid "Cancel"
+msgstr ""
+
