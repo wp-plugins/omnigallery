@@ -1,0 +1,28 @@
+*** OmniGallery Changelog ***
+
+2014.07.07 - Version 1.0.7
+- Fix: Flickr API not working
+  File Added: includes/flickr/wordpress-flickr.php
+  Files Affected: omnigallery.php, includes/scflickr.class.php
+
+2013.06.12 - version 1.0.6
+ * Fix issue on plugin_get_version(), change the function name so it will not conflict with other plugins.
+
+2013.03.20 - version 1.0.5
+ * Fix issue on picasa, username check.
+
+2013.01.16 - version 1.0.4
+ * Added plugin_get_version on omnigallery class
+ * Fix the way to fetch version number
+
+2013.01.10 - version 1.0.3
+ * Add Dribble gallery.
+
+2012.12.28 - version 1.0.2
+ * Instagram bug fixes.
+
+2012.12.13 - version 1.0.1
+ * Flickr bug fixes.
+
+2012.11.26 - version 1.0.0
+ * First release!
