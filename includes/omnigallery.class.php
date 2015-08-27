@@ -15,7 +15,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 Class OmniGallery
 {
-    private $file;
+  private $file;
 	public $version;
 
 	function __construct($file){
@@ -40,29 +40,29 @@ Class OmniGallery
 		$this->token = 'omnigallery';
 
 		$this->load_plugin_textdomain();
-        add_action( 'init', array( &$this, 'load_localisation' ), 0 );
+    add_action( 'init', array( &$this, 'load_localisation' ), 0 );
         
 		//add pages
 		add_action( 'admin_menu', array( &$this, 'admin_screen_register') );   // Register menu
-        add_action( 'admin_init', array( &$this, 'admin_init') );              // Register options
-        add_action( 'admin_init', array( &$this, 'sc_auth_read') );
-                
-        add_filter( 'post_gallery', array(&$this, 'modify_gallery'), 20, 2 );
-        add_filter( 'media_upload_tabs', array(&$this, 'media_upload_tabs') );
-		add_action( 'media_upload_omnigallery', array(&$this, 'media_upload_omnigallery') );
+    add_action( 'admin_init', array( &$this, 'admin_init') );              // Register options
+    add_action( 'admin_init', array( &$this, 'sc_auth_read') );
+            
+    add_filter( 'post_gallery', array(&$this, 'modify_gallery'), 20, 2 );
+    add_filter( 'media_upload_tabs', array(&$this, 'media_upload_tabs') );
+    add_action( 'media_upload_omnigallery', array(&$this, 'media_upload_omnigallery') );
         
 	}
-
-    function sc_auth_read() {
-        if ( isset($_GET['frob']) ) {
-            global $pf;
-            $auth = $pf->auth_getToken($_GET['frob']);
-            update_option('sc_flickr_token', $auth['token']['_content']);
-            $pf->setToken($auth['token']['_content']);
-            header('Location: ' . $_SESSION['phpFlickr_auth_redirect']);
-            exit;
-        }
+  
+  function sc_auth_read() {
+    if ( isset($_GET['frob']) ) {
+        global $pf;
+        $auth = $pf->auth_getToken($_GET['frob']);
+        update_option('sc_flickr_token', $auth['token']['_content']);
+        $pf->setToken($auth['token']['_content']);
+        header('Location: ' . $_SESSION['phpFlickr_auth_redirect']);
+        exit;
     }
+  }
 
 	function getInstance()
 	{
@@ -106,12 +106,12 @@ Class OmniGallery
 	 * @return  void
 	 */
 	public function load_plugin_textdomain () {
-	    $domain = 'omnigallery';
-	    // The "plugin_locale" filter is also used in load_plugin_textdomain()
-	    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+	  $domain = 'omnigallery';
+	  // The "plugin_locale" filter is also used in load_plugin_textdomain()
+	  $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 	 
-	    load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-	    load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( $this->file ) ) . '/lang/' );
+	  load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
+	  load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( $this->file ) ) . '/lang/' );
 	} // End load_plugin_textdomain()
     
 	/**
@@ -122,7 +122,7 @@ Class OmniGallery
 	 * @return void
 	 */
 	public function activation() {
-	    $this->install();
+	  $this->install();
 		$this->register_plugin_version();
 	} // End activation()
 
@@ -139,11 +139,11 @@ Class OmniGallery
 		}
 	} // End register_plugin_version()
 
-    function admin_screen_register(){
-        $hook = add_menu_page( $this->name, $this->name, 'manage_options', $this->token, array( $this, 'admin_page' ), $this->assets_url . 'images/menu-icon.png' );
-        add_action( 'admin_print_styles-' . $hook, array( $this, 'admin_styles' ) );
-        
-    }
+  function admin_screen_register(){
+      $hook = add_menu_page( $this->name, $this->name, 'manage_options', $this->token, array( $this, 'admin_page' ), $this->assets_url . 'images/menu-icon.png' );
+      add_action( 'admin_print_styles-' . $hook, array( $this, 'admin_styles' ) );
+      
+  }
 
 	/**
 	 * Adds a "OmniGallery" tab to the "Add Media" panel.
@@ -171,7 +171,7 @@ Class OmniGallery
 	 * @return void
 	 */
 	function media_upload_omnigallery_form() {
-		media_upload_header();
+		echo media_upload_header();
 		require_once( $this->plugin_path ."/omnigallery-form.php");
 	}
 
@@ -291,117 +291,113 @@ Class OmniGallery
 		$current_user = wp_get_current_user();
 		?>
         
-        <div id="omnigallery" class="wrap">
+    <div id="omnigallery" class="wrap">
+     
+      <h1><?php echo esc_html( $this->name ); ?> <span class="version"><?php echo esc_html( $this->version ); ?></span></h1>
+         
+      <form method="post" action="options.php" id="options">
+                
+        <?php
+        // Get array with all the options
+        $sc_settings = $this->get_settings();
+        // Make selects data
+        $sc_type_instaArr = array( 'popular' => __('Popular','omnigallery'), 'self' => __('Self','omnigallery'), 'feed' => __('Feed','omnigallery'));
         
-        	<div id="icon-options-general" class="icon32"><br/></div>
-            <!--div id="icon-omnigallery" class="icon32"><br/></div-->
-        	<h2><?php echo esc_html( $this->name ); ?> <span class="version"><?php echo esc_html( $this->version ); ?></span></h2>
-            <p class="by-colorlabs"><?php _e( 'Powered by', 'omnigallery' ); ?><a href="http://colorlabsproject.com" title="ColorLabs"><img src="<?php echo $this->assets_url; ?>images/colorlabs.png" alt="ColorLabs" /></a></p>
-            
-        	<form method="post" action="options.php" id="options">
+        ?>
                 
-                <?php
-                // Get array with all the options
-                $sc_settings = $this->get_settings();
-                // Make selects data
-                $sc_type_instaArr = array( 'popular' => __('Popular','omnigallery'), 'self' => __('Self','omnigallery'), 'feed' => __('Feed','omnigallery'));
-                
-                ?>
-                
-        		<?php wp_nonce_field('update-options'); settings_fields('sc-options'); ?>            
+        <?php wp_nonce_field('update-options'); settings_fields('sc-options'); ?>            
             
-                <?php require_once('omnigallery.admin.php'); ?>
-                
-                <input type="hidden" name="sc_action" value="update" />
-                
-                <p>
-                <input type="hidden" name="sc_active_version" class="button-primary" value="<?php echo $sc_settings['sc_active_version']  ?>" />
-                <input type="submit" name="submit" id="submit" class="button-primary" value="<?php _e('Save', 'instagrabber') ?>"/></p>
+        <?php require_once('omnigallery.admin.php'); ?>
+        
+        <input type="hidden" name="sc_action" value="update" />
+        
+        <p>
+        <input type="hidden" name="sc_active_version" class="button-primary" value="<?php echo $sc_settings['sc_active_version']  ?>" />
+        <input type="submit" name="submit" id="submit" class="button-primary" value="<?php _e('Save Changes', 'omnigallery') ?>"/></p>
             
-            </form><!--/#options-->
-            
-        </div><!--/#omnigallery-->
-            
+      </form><!--/#options-->
+      <p class="by-colorlabs"><a href="http://colorlabsproject.com" title="ColorLabs"><img width="200px" src="<?php echo $this->assets_url; ?>images/colorlabs.png" alt="ColorLabs" /></a></p>
+    </div><!--/#omnigallery-->    
 		<?php
 	}
     
-    // When plugin is activated, update version, and set any new settings to default
-    function install() {
-    		update_option('sc_active_version', '1.0.0');
-
-            add_option('sc_type_instagram', 'popular' );
-            add_option('sc_piccount_instagram', '10' );
-            add_option('sc_random_instagram', '' );
-            add_option('sc_tag_instagram', '' );
-            add_option('sc_address_instagram', '' );
-            
-            add_option('sc_api_flickr', 'ac87048a9c9f196051db45de49f3830a' );
-    		add_option('sc_secret_flickr', '79e03f86fd898330');
-            add_option('sc_username_flickr', '' );
-    		add_option('sc_piccount_flickr', '10');
-            
-            add_option('sc_username_pinterest', '' );
-    		add_option('sc_piccount_pinterest', '10');
-    		add_option('sc_board_pinterest', '');
-            
-    		add_option('sc_username_picasa', '113539730014413629030' );
-    		add_option('sc_piccount_picasa', '10' );
-            
-            add_option('sc_flickr_token', '' );
-    }
+  // When plugin is activated, update version, and set any new settings to default
+  function install() {
+    update_option('sc_active_version', '1.0.0');
     
-    function get_settings() {
+    add_option('sc_type_instagram', 'popular' );
+    add_option('sc_piccount_instagram', '10' );
+    add_option('sc_random_instagram', '' );
+    add_option('sc_tag_instagram', '' );
+    add_option('sc_address_instagram', '' );
     
-    	$sc_settings=array(
-            'sc_type_instagram'           => get_option('sc_type_instagram'),
-            'sc_piccount_instagram'       => get_option('sc_piccount_instagram'),
-            'sc_random_instagram'         => get_option('sc_random_instagram' ),
-            'sc_tag_instagram'            => get_option('sc_tag_instagram'),
-            'sc_address_instagram'        => get_option('sc_address_instagram'),
+    add_option('sc_api_flickr', 'ac87048a9c9f196051db45de49f3830a' );
+    add_option('sc_secret_flickr', '79e03f86fd898330');
+    add_option('sc_username_flickr', '' );
+    add_option('sc_piccount_flickr', '10');
+        
+    add_option('sc_username_pinterest', '' );
+    add_option('sc_piccount_pinterest', '10');
+    add_option('sc_board_pinterest', '');
+        
+    add_option('sc_username_picasa', '113539730014413629030' );
+    add_option('sc_piccount_picasa', '10' );
+        
+    add_option('sc_flickr_token', '' );
+  }
+    
+  function get_settings() {
+    
+    $sc_settings = array(
+        'sc_type_instagram'           => get_option('sc_type_instagram'),
+        'sc_piccount_instagram'       => get_option('sc_piccount_instagram'),
+        'sc_random_instagram'         => get_option('sc_random_instagram' ),
+        'sc_tag_instagram'            => get_option('sc_tag_instagram'),
+        'sc_address_instagram'        => get_option('sc_address_instagram'),
             
-            'sc_api_flickr'               => get_option('sc_api_flickr' ),
+        'sc_api_flickr'               => get_option('sc_api_flickr' ),
     		'sc_secret_flickr'            => get_option('sc_secret_flickr'),
-            'sc_username_flickr'          => get_option('sc_username_flickr'),
+        'sc_username_flickr'          => get_option('sc_username_flickr'),
     		'sc_piccount_flickr'          => get_option('sc_piccount_flickr'),
             
     		'sc_username_pinterest'       => get_option('sc_username_pinterest'),
-            'sc_piccount_pinterest'       => get_option('sc_piccount_pinterest'),
+        'sc_piccount_pinterest'       => get_option('sc_piccount_pinterest'),
     		'sc_board_pinterest'          => get_option('sc_board_pinterest'),
             
     		'sc_username_picasa'          => get_option('sc_username_picasa'),
     		'sc_piccount_picasa'          => get_option('sc_piccount_picasa'),
 			
-			'sc_username_dribble'          => get_option('sc_username_dribble'),
+        'sc_username_dribble'          => get_option('sc_username_dribble'),
     		'sc_piccount_dribble'          => get_option('sc_piccount_dribble'),
             
-            'sc_flickr_token'             => get_option('sc_flickr_token'),
-    	);
+        'sc_flickr_token'             => get_option('sc_flickr_token'),
+    );
     
-    	return $sc_settings;
-    }
+    return $sc_settings;
+  }
 
-    function admin_init() {
-            register_setting('sc-options', 'sc_type_instagram');
-            register_setting('sc-options', 'sc_piccount_instagram');
-            register_setting('sc-options', 'sc_random_instagram');
-            register_setting('sc-options', 'sc_tag_instagram');
-    		register_setting('sc-options', 'sc_address_instagram');
-            
-    		register_setting('sc-options', 'sc_api_flickr');
-    		register_setting('sc-options', 'sc_secret_flickr');
-    		register_setting('sc-options', 'sc_username_flickr');
-    		register_setting('sc-options', 'sc_piccount_flickr');
-            
-            register_setting('sc-options', 'sc_username_pinterest');
-    		register_setting('sc-options', 'sc_piccount_pinterest');
-    		register_setting('sc-options', 'sc_board_pinterest');
-            
-    		register_setting('sc-options', 'sc_username_picasa');
-    		register_setting('sc-options', 'sc_piccount_picasa');
-            register_setting('sc-options', 'sc_flickr_token');
-			register_setting('sc-options', 'sc_username_dribble');
-    		register_setting('sc-options', 'sc_piccount_dribble');
-    }
+  function admin_init() {
+    register_setting('sc-options', 'sc_type_instagram');
+    register_setting('sc-options', 'sc_piccount_instagram');
+    register_setting('sc-options', 'sc_random_instagram');
+    register_setting('sc-options', 'sc_tag_instagram');
+    register_setting('sc-options', 'sc_address_instagram');
+        
+    register_setting('sc-options', 'sc_api_flickr');
+    register_setting('sc-options', 'sc_secret_flickr');
+    register_setting('sc-options', 'sc_username_flickr');
+    register_setting('sc-options', 'sc_piccount_flickr');
+        
+    register_setting('sc-options', 'sc_username_pinterest');
+    register_setting('sc-options', 'sc_piccount_pinterest');
+    register_setting('sc-options', 'sc_board_pinterest');
+        
+    register_setting('sc-options', 'sc_username_picasa');
+    register_setting('sc-options', 'sc_piccount_picasa');
+    register_setting('sc-options', 'sc_flickr_token');
+		register_setting('sc-options', 'sc_username_dribble');
+    register_setting('sc-options', 'sc_piccount_dribble');
+  }
 
 }
 ?>

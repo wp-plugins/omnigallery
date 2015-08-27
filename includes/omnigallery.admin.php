@@ -69,7 +69,7 @@
 
                 <td><input class="regular-text" name="sc_api_flickr" id="sc_api_flickr" type="text" value="<?php if ($sc_settings['sc_api_flickr']!="") echo $sc_settings['sc_api_flickr'];?>"/>
                 <br />
-                <span class="description"><label for="sc_api_flickr"><?php _e('Entry Flickr API', 'omnigallery'); ?>.</label></span>
+                <span class="description"><label for="sc_api_flickr"><?php _e('Entry Flickr API', 'omnigallery'); ?>. <a href="https://www.flickr.com/services/apps/create/apply/" target="_blank"><?php _e('Get API Key ang Secret Key', 'omnigallery'); ?></a></label></span>
                 </td>
             </tr>
 

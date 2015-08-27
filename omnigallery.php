@@ -3,8 +3,8 @@
 Plugin Name: OmniGallery
 Plugin URI: http://colorlabsproject.com/
 Description: OmniGallery helps you to create photo gallery from your social network.
-Version: 1.0.7
-Author: ColorLabs & Company
+Version: 1.0.8
+Author: Colorlabs & Company
 Author URI: http://colorlabsproject.com/
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
@@ -19,15 +19,13 @@ $omnigallery = new OmniGallery(__FILE__);
 $omnigallery->version = omnigallery_plugin_get_version();
 
 if (class_exists('OmniGallery')):
-    $omnigallery = OmniGallery::getInstance();
     if (isset($omnigallery)){
-		register_activation_hook(__FILE__, array(&$OmniGallery, 'activation'));
+		register_activation_hook(__FILE__, array(&$omnigallery, 'activation'));
     }
 endif;
 
 // Includes Classes
 require_once('includes/scinstagram.class.php');
-require_once('includes/scfacebook.class.php');
 require_once('includes/scflickr.class.php');
 require_once('includes/scpicasa.class.php');
 require_once('includes/scpinterest.class.php');
@@ -41,14 +39,6 @@ if (class_exists('SCInstagram')):
 	}
 endif;
 
-
-
-if (class_exists('SCFacebook')):
-    $scfacebook = new SCFacebook();
-endif;
-
-
-
 /**
  * Returns current plugin version.
  * 
@@ -59,16 +49,26 @@ function omnigallery_plugin_get_version() {
 
     if ( is_admin() ) {
 
-        if ( ! function_exists( 'get_plugin_data' ) )
+      if ( ! function_exists( 'get_plugin_data' ) )
+        require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+      $plugin_data = get_plugin_data( __FILE__, false, false );
 
-        $plugin_data = get_plugin_data( __FILE__, false, false );
+      $plugin_version = $plugin_data['Version'];
 
-        $plugin_version = $plugin_data['Version'];
-
-        return $plugin_version;
+      return $plugin_version;
 
     }
 
+}
+
+// Add Omnivideo Documentation
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'omnigallery_action_links' );
+function omnigallery_action_links( $links ) {
+
+	$plugin_links = array(
+		'<a href="http://colorlabsproject.com/documentation/omnigallery/" target="_blank">' . __( 'Documentation' ) . '</a>'
+	);
+
+	return array_merge( $plugin_links, $links );
 }

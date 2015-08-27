@@ -8,7 +8,7 @@
  */
 
 $selected_tab = isset($_GET['omnigallery-tab']) ? esc_attr($_GET['omnigallery-tab']) : 'instagram';
-if (!in_array($selected_tab, array('instagram', 'flickr', 'picasa', 'pinterest', 'facebook', 'dribble', '500px'))) {
+if (!in_array($selected_tab, array('instagram', 'flickr', 'picasa', 'pinterest', 'facebook', 'dribble'))) {
 	$selected_tab = 'instagram';
 }
 
@@ -67,31 +67,10 @@ else if (isset($_POST['omnigallery-cancel'])) {
 </script>
 <style type="text/css">
 #omnigallery-shortcode-form p.prelude, #omnigallery-shortcode-form .button-panel{ clear: both; }
+#omnigallery-shortcode-form .subsubsub{ float: none; }
 #omnigallery-shortcode-form div.preview{ float: left; clear: both; }
 </style>
 <?php
-
-/* Facebook Gallery Selection */
-
-			$session_key= get_option('fb-session-key');
-			$session_sec= get_option('fb-session-secret');
-			if(($session_key!='')&&($session_sec!='')){
-			require_once('includes/facebook-platform/facebook.php');
-			global $appapikey,$appsecret;
-			$facebook = new Facebook($appapikey, $appsecret, null, true);
-			$uid = get_option('fb-session-uid');
-			$facebook->api_client->session_key = $session_key;
-			$facebook->api_client->secret      = $session_sec;
-			$albums = $facebook->api_client->photos_getAlbums($uid, null);
-            $fbalbum = array();
-			if( is_array($albums) ){
-					foreach($albums as $album){
-					//echo '<option '.$selected.' value="'.$album['aid'].'">'.$album['name'].'</option>';
-                    
-                    $fbalbum[$album['aid']] = $album['name'];
-                    
-					}
-                }}
 
 $fields = array(
 	'instagram' => array(
@@ -114,30 +93,9 @@ $fields = array(
 		'prelude' => __('You can define your Pinterest Username under OmniGallery Settings', 'omnigallery'),
 		'fields' => array(),
 	),
-	'facebook' => array(
-		'name' => __('Facebook', 'omnigallery'),
-		'prelude' => __('You can define your Facebook API Key under OmniGallery &rarr; FB Album Settings', 'omnigallery'),
-		'fields' => array(
-        
-    		array(
-    			'id' => 'gallery',
-    			'name' => __('Select Album', 'omnigallery'),
-    			'type' => 'select',
-    			'options' => $fbalbum,
-    			'req' => true,
-                'hint' => __('Select your Facebook photo album to use in gallery.', 'omnigallery')
-    		),
-        
-        ),
-	),
 	'dribble' => array(
 		'name' => __('Dribble', 'omnigallery'),
         'prelude' => __('You can define your Dribble Username under OmniGallery Settings', 'omnigallery'),
-		'fields' => array(),
-	),
-	'500px' => array(
-		'name' => __('500px', 'omnigallery'),
-        'prelude' => __('You can define your 500px Username under OmniGallery Settings', 'omnigallery'),
 		'fields' => array(),
 	),
 );
@@ -167,7 +125,7 @@ if (!empty($prelude)) {
 }
 
 echo "<table class='omnigallery-form'>";
-echo "<tr>";"</tr>";
+echo "<tr>";
 foreach ($field_list as $field) {
 	echo "<tr>";
 	echo "<th scope='row'>{$field['name']} ".(isset($field['req']) && $field['req'] ? '(*)' : '')." </th>";
@@ -192,14 +150,13 @@ foreach ($field_list as $field) {
 echo "</table>";
 
 echo "<div class='preview'>";
-echo "<script type='text/javascript'></script>";
 echo "<h4>".__('Shortcode preview', 'omnigallery')."</h4>";
 echo "<pre class='html' id='omnigallery-preview' name='omnigallery-preview'></pre>";
 echo "<input type='hidden' id='omnigallery-shortcode' name='omnigallery-shortcode' />";
 echo "</div>";
 
 echo "<div class='button-panel'>";
-echo get_submit_button(__('Insert into post', 'omnigallery'), 'primary', 'omnigallery-submit', false);
+echo get_submit_button(__('Insert into post', 'omnigallery'), 'primary', 'omnigallery-submit', false).' ';
 echo get_submit_button(__('Cancel', 'omnigallery'), 'delete', 'omnigallery-cancel', false);
 echo "</div>";
 echo "</form>";

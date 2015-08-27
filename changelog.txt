@@ -1,5 +1,9 @@
 *** OmniGallery Changelog ***
 
+2015.08.28 - Version 1.0.8
+- Fix: Compatible up to WordPress 4.3 and change with new social api
+  Files Affected: omnigallery.php, omnigallery-form.php, omnigallery.class.php, scinstagram.options.php, omnigallery.admin.php, scflickr.class.php, scpicasa.class.php, timthumb.php, wordpress-flickr.php
+  
 2014.07.07 - Version 1.0.7
 - Fix: Flickr API not working
   File Added: includes/flickr/wordpress-flickr.php

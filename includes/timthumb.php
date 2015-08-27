@@ -133,10 +133,15 @@ if(! isset($ALLOWED_SITES)){
 		'imgur.com',
 		'imageshack.us',
 		'tinypic.com',
-        'ggpht.com',
-        'amazonaws.com',
-        'pinterest.com',
-        'fbcdn.net',
+    'ggpht.com',
+    'amazonaws.com',
+    'pinterest.com',
+    'fbcdn.net',
+    'fbcdn.net',
+    'cdninstagram.com',
+    'pinimg.com',
+    'cloudfront.net',
+    'googleusercontent.com'
 	);
 }
 // -------------------------------------------------------------

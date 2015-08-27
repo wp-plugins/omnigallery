@@ -1,8 +1,8 @@
-﻿=== OmniGallery by ColorLabs & Company ===
+﻿=== OmniGallery by Colorlabs & Company ===
 Contributors: colorlabs
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=paypal@colorlabsproject.com&item_name=Donation+for+Laboratory
 Requires at least: WP 3.1
-Tested up to: WordPress 3.5.0
+Tested up to: 4.3.0
 Stable tag: trunk
 License: GPLv3 or later
 Tags: flickr gallery, picasa gallery, pinterest gallery, facebook gallery, instagram gallery, dribble gallery, photo gallery, colorlabs, gallery, social gallery, social, photo, flickr, picasa, facebook, instagram, pinterest
@@ -11,7 +11,7 @@ OmniGallery helps you to create photo gallery from your social network.
 
 == Description ==
 
-Enhance your WordPress website with the OmniGallery Photo Gallery. You can easily add your photo from Instagram, Pinterest, Picasa, Flickr, Facebook, and Dribble into your Wordpress Gallery.
+Enhance your WordPress website with the OmniGallery Photo Gallery. You can easily add your photo from Instagram, Pinterest, Picasa, Flickr, and Dribble into your Wordpress Gallery.
 Adding the gallery is very simple, you just have to add new post/page, then select gallery icon, select omnigallery then you can select which gallery you want to fetch your images to your blog.
 You can add multiple gallery on the same post/page.
 
@@ -55,6 +55,15 @@ Bugs can be reported in our [ColorLabs Support Desk](http://colorlabsproject.com
 
 == Changelog ==
 
+= 1.0.8 =
+  
+ * Fix issue on Flickr Photo Gallery
+ * Fix issue on Picasa
+ * Fix issue on Instagram
+ * Fix issue on Pinterest
+ * Fix issue on Dribbble
+ * Compatible up to WordPress 4.3
+ 
 = 1.0.7 =
   
  * Flickr issue on Flickr Photo Gallery

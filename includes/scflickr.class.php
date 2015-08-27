@@ -40,16 +40,6 @@ class SCFlickr
       .'</style>';      
   }
 
-  function getInstance()
-  {
-    global $SCFlickr;
-    if(!isset($SCFlickr)) $SCFlickr = new phpFlickr("ac87048a9c9f196051db45de49f3830a","79e03f86fd898330");
-    
-    return $SCFlickr;
-  }
-    
-  function handleOptions() { }
-
   function get_gallery_images($attr = array()) {
     global $omnigallery, $SCFlickr, $post;
     static $instance = 0;
@@ -77,7 +67,9 @@ class SCFlickr
     $api_key = get_option( 'sc_api_flickr' );
     $api_secret = get_option( 'sc_secret_flickr' );
     $user_id = get_option('sc_username_flickr');
+    
     $flickr = new Colabs_WP_Flickr( $api_key, $api_secret );
+
     $user_photo = $flickr->get_user_photos( $user_id, get_option( 'sc_piccount_flickr' ) );
 
     $columns = intval($columns);
